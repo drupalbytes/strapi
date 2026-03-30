@@ -1,0 +1,10 @@
+node_modules/
+.env
+build/
+.cache/
+.tmp/
+dist/
+backend/node_modules/
+backend/.cache/
+backend/build/
+frontend/node_modules/

@@ -1,0 +1,11 @@
+footer{
+    background-image: linear-gradient(to right, #0068C4 , #802CBF);
+    color: #fff;
+}
+footer p{
+    margin: 0px;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
