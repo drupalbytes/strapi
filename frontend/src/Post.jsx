@@ -22,7 +22,7 @@ const Posts = () => {
           <div className="col-md-4 mb-4" key={id}>
             <div className="card h-100 shadow-sm">
               {Image?.url && (
-                <img src={`${import.meta.env.VITE_BACKEND_URL}${Image.url}`} className="card-img-top img-fluid" alt={Title} style={{ height: "300px", objectFit: "contain" }} />
+                <img src={`${Image.url}`} className="card-img-top img-fluid" alt={Title} style={{ height: "300px", objectFit: "contain" }} />
               )}
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{Title}</h5>

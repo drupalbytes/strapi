@@ -45,7 +45,7 @@ const Hero = () => {
               {button_text}
             </a>
           </div>
-          <div className="side--image col-md-6 col-12">{sideImageUrl && <img src={`${import.meta.env.VITE_BACKEND_URL}${sideImageUrl}`} className="img-fluid" alt="Side Image" />}</div>
+          <div className="side--image col-md-6 col-12">{sideImageUrl && <img src={`${sideImageUrl}`} className="img-fluid" alt="Side Image" />}</div>
         </div>
       </div>
     </div>

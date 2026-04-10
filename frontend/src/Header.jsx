@@ -20,7 +20,7 @@ const Header = () => {
     {header.logo && (
       <a className="navbar-brand m-0" href="/">
         <img
-          src={`${import.meta.env.VITE_BACKEND_URL}${header.logo.url}`}
+          src={`${header.logo.url}`}
           alt="logo"
           width="305"
         />

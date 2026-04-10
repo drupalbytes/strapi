@@ -33,7 +33,7 @@ const About = () => {
               {button_text}
             </a>
           </div>
-          <div className="col-md-6 col-12">{imageUrl && <img src={`${import.meta.env.VITE_BACKEND_URL}${imageUrl}`} className="img-fluid rounded-4" alt="About Image" />}</div>
+          <div className="col-md-6 col-12">{imageUrl && <img src={`${imageUrl}`} className="img-fluid rounded-4" alt="About Image" />}</div>
         </div>
       </div>
     
