@@ -5,7 +5,7 @@ const About = () => {
   const [about, setAbout] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/about?populate=*")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/about?populate=*`)
       .then((res) => res.json())
       .then((data) => setAbout(data.data))
       .catch((err) => console.error(err));
@@ -33,7 +33,7 @@ const About = () => {
               {button_text}
             </a>
           </div>
-          <div className="col-md-6 col-12">{imageUrl && <img src={`http://localhost:1337${imageUrl}`} className="img-fluid rounded-4" alt="About Image" />}</div>
+          <div className="col-md-6 col-12">{imageUrl && <img src={`${import.meta.env.VITE_BACKEND_URL}${imageUrl}`} className="img-fluid rounded-4" alt="About Image" />}</div>
         </div>
       </div>
     

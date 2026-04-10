@@ -11,7 +11,7 @@ const PostDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/posts?filters[slug][$eq]=${slug}&populate=*`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/posts?filters[slug][$eq]=${slug}&populate=*`)
       .then(r => r.json())
       .then(d => { setPost(d.data?.[0] ?? null); setLoading(false); })
       .catch(() => setLoading(false));
@@ -27,7 +27,7 @@ const PostDetail = () => {
       <main className="container py-5">
         <Link to="/" className="text-dark fw-bold text-decoration-none">← Back to all posts</Link>
         <h1 className="mb-3 mt-2">{Title}</h1>
-        {Image?.url && <img src={`http://localhost:1337${Image.url}`} alt={Title} className="img-fluid mb-4" />}
+        {Image?.url && <img src={`${import.meta.env.VITE_BACKEND_URL}${Image.url}`} alt={Title} className="img-fluid mb-4" />}
         <article className="lh-lg fs-5">{getText(Description)}</article>
       </main>
       <Footer />

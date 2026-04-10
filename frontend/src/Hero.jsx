@@ -6,7 +6,7 @@ const Hero = () => {
   const [hero, setHero] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/hero?populate=*")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/hero?populate=*`)
       .then((res) => res.json())
       .then((data) => setHero(data.data))
       .catch((err) => console.error(err));
@@ -30,7 +30,7 @@ const Hero = () => {
     <div className="hero-section"
       style={{
         backgroundImage: imageUrl
-          ? `url(http://localhost:1337${imageUrl})`
+          ? `url(${import.meta.env.VITE_BACKEND_URL}${imageUrl})`
           : "none",
         backgroundSize: "cover",
         padding: "100px 0",
@@ -45,7 +45,7 @@ const Hero = () => {
               {button_text}
             </a>
           </div>
-          <div className="side--image col-md-6 col-12">{sideImageUrl && <img src={`http://localhost:1337${sideImageUrl}`} className="img-fluid" alt="Side Image" />}</div>
+          <div className="side--image col-md-6 col-12">{sideImageUrl && <img src={`${import.meta.env.VITE_BACKEND_URL}${sideImageUrl}`} className="img-fluid" alt="Side Image" />}</div>
         </div>
       </div>
     </div>

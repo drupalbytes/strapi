@@ -4,7 +4,7 @@ const Header = () => {
   const [header, setHeader] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/header?populate=*")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/header?populate=*`)
       .then((res) => res.json())
       .then((data) => setHeader(data.data))
       .catch((err) => console.error(err));
@@ -20,7 +20,7 @@ const Header = () => {
     {header.logo && (
       <a className="navbar-brand m-0" href="/">
         <img
-          src={`http://localhost:1337${header.logo.url}`}
+          src={`${import.meta.env.VITE_BACKEND_URL}${header.logo.url}`}
           alt="logo"
           width="305"
         />

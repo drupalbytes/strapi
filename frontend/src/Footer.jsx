@@ -5,7 +5,7 @@ const Footer = () => {
   const [footer, setFooter] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/footer?populate=*")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/footer?populate=*`)
       .then((res) => res.json())
       .then((data) => setFooter(data.data))
       .catch((err) => console.error(err));

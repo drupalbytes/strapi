@@ -4,7 +4,7 @@ const Cta = () => {
   const [cta, setCta] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/cta?populate=*")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cta?populate=*`)
       .then((res) => res.json())
       .then((data) => setCta(data.data))
       .catch((err) => console.error(err));

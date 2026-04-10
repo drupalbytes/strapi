@@ -7,10 +7,10 @@ import Footer from "./Footer.jsx";
 const PageDetail = () => {
   const { slug } = useParams();
   const [page, setPage] = useState(null);
-  const [setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/pages?filters[slug][$eq]=${slug}&populate=*`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/pages?filters[slug][$eq]=${slug}&populate=*`)
       .then(r => r.json())
       .then(d => { setPage(d.data?.[0] ?? null); setLoading(false); })
       .catch(() => setLoading(false));
