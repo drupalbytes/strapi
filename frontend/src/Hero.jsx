@@ -30,7 +30,7 @@ const Hero = () => {
     <div className="hero-section"
       style={{
         backgroundImage: imageUrl
-          ? `url(${import.meta.env.VITE_BACKEND_URL}${imageUrl})`
+          ? `url(${imageUrl})`
           : "none",
         backgroundSize: "cover",
         padding: "100px 0",
